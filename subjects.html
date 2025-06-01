@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Success Academy - Subjects</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #f1c40f;
+    }
+    header {
+      background: linear-gradient(135deg, #000000, #434343);
+      color: #f1c40f;
+      padding: 40px 20px 60px;
+      text-align: center;
+      border-bottom: 3px solid #f1c40f;
+    }
+    header img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin: 10px 0 5px;
+    }
+    nav {
+      background: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      border-bottom: 2px solid #f1c40f;
+    }
+    nav a {
+      color: #f1c40f;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+      color: #f1c40f;
+      border-bottom: 2px solid #f1c40f;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+    }
+    .subject {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border: 1px solid #f1c40f;
+      padding: 15px;
+      border-radius: 8px;
+      background: #222;
+      transition: background 0.3s;
+    }
+    .subject:hover {
+      background: #333;
+    }
+    .subject img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border-radius: 10px;
+      border: 2px solid #f1c40f;
+      background: black;
+      padding: 8px;
+    }
+    .subject-description {
+      flex: 1;
+      font-size: 1.1em;
+    }
+    footer {
+      text-align: center;
+      background: #000000;
+      color: #f1c40f;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 2px solid #f1c40f;
+    }
+    @media(max-width: 600px){
+      .subject {
+        flex-direction: column;
+        text-align: center;
+      }
+      .subject img {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Success Academy Logo" />
+    <h1>Subjects Offered</h1>
+    <p>Explore a wide range of subjects tailored for success</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tutors.html">Tutors</a>
+    <a href="subjects.html">Subjects</a>
+    <a href="about.html">About Us</a>
+    <a href="register.html">Register</a>
+  </nav>
+
+  <div class="container">
+    <h2>Subjects Conducted (Grades 1 to O/L)</h2>
+
+    <div class="subject">
+      <img src="quran.png" alt="Quran" />
+      <div class="subject-description">
+        <strong>Qur'an:</strong> For kids and females.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="islam.png" alt="Islam" />
+      <div class="subject-description">
+        <strong>Islam:</strong> Islamic studies (1-5).
+      </div>
+    </div>
+    <div class="subject">
+      <img src="tamil.png" alt="Tamil" />
+      <div class="subject-description">
+        <strong>Tamil:</strong> Language instruction from Grade 1 to 9.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="health.png" alt="Health Education" />
+      <div class="subject-description">
+        <strong>Health Education:</strong> For Grade 7 and above.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="english.png" alt="English" />
+      <div class="subject-description">
+        <strong>English:</strong> Cambridge, Edexcel, and National syllabus.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="geography.png" alt="Geography" />
+      <div class="subject-description">
+        <strong>Geography:</strong> For all eligible grades.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="science.png" alt="Science" />
+      <div class="subject-description">
+        <strong>Science:</strong> From Grade 1 up to O/L.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="maths.png" alt="Maths" />
+      <div class="subject-description">
+        <strong>Maths:</strong> Grades 1 to 11.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="ict.png" alt="ICT" />
+      <div class="subject-description">
+        <strong>I.C.T:</strong> Grades 4 to 10.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="business.png" alt="Business" />
+      <div class="subject-description">
+        <strong>Business & Accounting:</strong> Grades 9 and 10.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="lit.png" alt="English Literature" />
+      <div class="subject-description">
+        <strong>English Literature:</strong> Grades 7 to 11.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="civics.png" alt="Civics" />
+      <div class="subject-description">
+        <strong>Civics:</strong> Grades 1 to 11.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="sinhala.png" alt="Sinhala" />
+      <div class="subject-description">
+        <strong>Sinhala:</strong> Grades 1 to 9.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="arabic.png" alt="Arabic" />
+      <div class="subject-description">
+        <strong>Arabic:</strong> Grades 3 to 5.
+      </div>
+    </div>
+    <div class="subject">
+      <img src="history.png" alt="History" />
+      <div class="subject-description">
+        <strong>History:</strong> Grades 7 to 11.
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Success Academy. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+    
