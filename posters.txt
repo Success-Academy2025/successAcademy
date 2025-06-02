@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Success Academy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <title>Success Academy - Posters</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,20 +16,18 @@
     header {
       background: linear-gradient(135deg, #000000, #434343);
       color: #f1c40f;
-      padding: 60px 20px 30px 20px;
+      padding: 40px 20px 60px;
       text-align: center;
       border-bottom: 3px solid #f1c40f;
     }
     header img {
-      width: 100px;
-      height: auto;
-      display: block;
-      margin: 0 auto 20px;
+      height: 80px;
+      margin-bottom: 10px;
     }
     header h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-size: 3em;
+      margin: 10px 0 5px;
     }
     nav {
       background: #1a1a1a;
@@ -54,23 +53,20 @@
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
     }
-    h2 {
-      color: #f1c40f;
-      font-family: 'Great Vibes', cursive;
-      font-size: 36px;
-      border-bottom: 2px solid #f1c40f;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
+    .poster {
+      margin: 20px auto;
+      max-width: 90%;
+      border: 3px solid #f1c40f;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
     }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #fff;
-    }
-    .highlight {
-      color: #f1c40f;
-      font-weight: bold;
+    .poster img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
     footer {
       text-align: center;
@@ -85,7 +81,8 @@
 <body>
   <header>
     <img src="logo.jpg" alt="Success Academy Logo">
-    <h1>About Success Academy</h1>
+    <h1>Posters</h1>
+    <p>Explore our featured announcements and visual updates</p>
   </header>
 
   <nav>
@@ -95,18 +92,36 @@
     <a href="about.html">About Us</a>
     <a href="register.html">Register</a>
     <a href="posters.html">Posters</a>
-
   </nav>
 
   <div class="container">
-    <h2>Who We Are</h2>
-    <p>At <span class="highlight">Success Academy</span>, we are a passionate and committed educational institution focused on nurturing young minds from. Our mission is to empower students with quality tutoring in a personalized and supportive environment.</p>
-
-    <h2>Our Values</h2>
-    <p>We believe in excellence, integrity, and commitment. Every lesson is delivered with care and dedication, ensuring that each child receives the attention they deserve. Our tutors are not just educators but mentors who inspire growth both academically and personally.</p>
-
-    <h2>Why Choose Us</h2>
-    <p>Whether your child is following a national or international curriculum, we offer support through specialized subjects such as <span class="highlight">Science, Maths, ICT, Business, English, and Qur'an Studies</span>. We aim to make learning enjoyable, effective, and most importantly, empowering.</p>
+    <div class="poster">
+      <img src="poster1.png" alt="Poster 1">
+    </div>
+    <div class="poster">
+      <img src="poster2.png" alt="Poster 2">
+    </div>
+    <div class="poster">
+      <img src="poster3.png" alt="Poster 3">
+    </div>
+    <div class="poster">
+      <img src="poster4.png" alt="Poster 4">
+    </div>
+    <div class="poster">
+      <img src="poster5.png" alt="Poster 5">
+    </div>
+    <div class="poster">
+      <img src="poster6.png" alt="Poster 6">
+    </div>
+    <div class="poster">
+      <img src="poster7.png" alt="Poster 7">
+    </div>
+    <div class="poster">
+      <img src="poster8.png" alt="Poster 8">
+    </div>
+    <div class="poster">
+      <img src="poster9.png" alt="Poster 9">
+    </div>
   </div>
 
   <footer>
