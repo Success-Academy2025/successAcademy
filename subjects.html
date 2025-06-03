@@ -5,103 +5,183 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Success Academy - Subjects</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Roboto:wght@400;700&display=swap');
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #121212;
-      color: #f1c40f;
+      font-family: 'Roboto', sans-serif;
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.6;
     }
+
     header {
-      background: linear-gradient(135deg, #000000, #434343);
-      color: #f1c40f;
-      padding: 40px 20px 60px;
+      background: #ffffff;
+      color: #000000;
+      padding: 50px 20px 70px;
       text-align: center;
-      border-bottom: 3px solid #f1c40f;
+      border-bottom: 2px solid #bfa76a;
+      box-shadow: 0 4px 10px rgba(191, 167, 106, 0.2);
     }
-    header img {
-      height: 80px;
-      margin-bottom: 10px;
+
+  header img {
+  height: 90px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 3px #bfa76a);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border-radius: 50%;   /* Makes the logo circular */
+  object-fit: cover;    /* Ensures the image covers the circle nicely */
+}
+
+    header img:hover {
+      transform: scale(1.05);
     }
+
     header h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3em;
-      margin: 10px 0 5px;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 3.5rem;
+      margin: 0 0 10px;
+      letter-spacing: 1px;
+      color: #000000;
     }
+
+    header p {
+      font-size: 1.2rem;
+      color: #333333;
+      font-weight: 500;
+    }
+
     nav {
-      background: #1a1a1a;
+      background: #000000;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 15px;
-      border-bottom: 2px solid #f1c40f;
+      gap: 25px;
+      padding: 18px 10px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1;
     }
+
     nav a {
-      color: #f1c40f;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
       color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: #bfa76a;
+      color: #000000;
+    }
+
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: #1e1e1e;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      max-width: 1100px;
+      margin: 40px auto 60px;
+      background: #ffffff;
+      padding: 35px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(191, 167, 106, 0.3);
     }
+
     h2 {
-      color: #f1c40f;
-      border-bottom: 2px solid #f1c40f;
-      padding-bottom: 10px;
-      margin-bottom: 25px;
-    }
-    .subject {
-      margin: 20px 0;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      border: 1px solid #f1c40f;
-      padding: 15px;
-      border-radius: 8px;
-      background: #222;
-      transition: background 0.3s;
-    }
-    .subject:hover {
-      background: #333;
-    }
-    .subject img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      border-radius: 10px;
-      border: 2px solid #f1c40f;
-      background: black;
-      padding: 8px;
-    }
-    .subject-description {
-      flex: 1;
-      font-size: 1.1em;
-    }
-    footer {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 2.5rem;
+      color: #000000;
+      border-bottom: 2px solid #bfa76a;
+      padding-bottom: 14px;
+      margin-bottom: 30px;
       text-align: center;
-      background: #000000;
-      color: #f1c40f;
-      padding: 20px;
-      margin-top: 40px;
-      border-top: 2px solid #f1c40f;
     }
-    @media(max-width: 600px){
-      .subject {
-        flex-direction: column;
-        text-align: center;
+
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .subject-card {
+      background: #f7f7f7;
+      border-radius: 15px;
+      padding: 25px 20px;
+      box-shadow: 0 5px 15px rgba(191, 167, 106, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .subject-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(191, 167, 106, 0.5);
+    }
+
+ .subject-image {
+  width: 120px;       /* smaller fixed width */
+  height: 120px;      /* same height for perfect circle */
+  object-fit: cover;
+  border-radius: 50%; /* makes it a circle */
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px #bfa76a;
+  transition: transform 0.3s ease;
+}
+    .subject-card:hover .subject-image {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #bfa76a;
+    }
+
+    .subject-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #000000;
+    }
+
+    .subject-description {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #333333;
+    }
+
+    @media (max-width: 850px) {
+      header h1 {
+        font-size: 2.8rem;
       }
-      .subject img {
-        margin-bottom: 10px;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+      }
+
+      .subjects-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -109,8 +189,8 @@
 <body>
   <header>
     <img src="logo.jpg" alt="Success Academy Logo" />
-    <h1>Subjects Offered</h1>
-    <p>Explore a wide range of subjects tailored for success</p>
+    <h1>Explore Our Subjects</h1>
+    <p>Subjects crafted for your success</p>
   </header>
 
   <nav>
@@ -120,110 +200,77 @@
     <a href="about.html">About Us</a>
     <a href="register.html">Register</a>
     <a href="posters.html">Posters</a>
-
   </nav>
 
   <div class="container">
-    <h2>Subjects Conducted (Grades 1 to A/L)</h2>
-
-    <div class="subject">
-      <img src="quran.png" alt="Quran" />
-      <div class="subject-description">
-        <strong>Qur'an:</strong> For kids and females.
+    <h2>Subjects We Offer</h2>
+    <div class="subjects-grid">
+           </div>
+      <div class="subject-card">
+        <img src="tamil.png" alt="Tamil" class="subject-image" />
+        <h3 class="subject-title">Tamil</h3>
+        <p class="subject-description">Comprehensive Tamil language and literature classes.</p>
+      </div>
+      <div class="subject-card">
+        <img src="health.png" alt="Health Education" class="subject-image" />
+        <h3 class="subject-title">Health Education</h3>
+        <p class="subject-description">Learn about physical, mental, and social health to promote well-being.</p>
+      </div>
+      <div class="subject-card">
+        <img src="english.png" alt="English" class="subject-image" />
+        <h3 class="subject-title">English (Cambridge, Edexcel & National)</h3>
+        <p class="subject-description">Master English language skills tailored to Cambridge, Edexcel, and National curricula.</p>
+      </div>
+      <div class="subject-card">
+        <img src="geography.png" alt="Geography" class="subject-image" />
+        <h3 class="subject-title">Geography</h3>
+        <p class="subject-description">Explore physical and human geography with interactive lessons and map skills.</p>
+      </div>
+      <div class="subject-card">
+        <img src="science.png" alt="Science" class="subject-image" />
+        <h3 class="subject-title">Science</h3>
+        <p class="subject-description">Engage with biology, chemistry, physics, and environmental sciences for a holistic science education.</p>
+      </div>
+      <div class="subject-card">
+        <img src="maths.png" alt="Mathematics" class="subject-image" />
+        <h3 class="subject-title">Mathematics (English & Tamil Medium)</h3>
+        <p class="subject-description">Strong focus on numbers, algebra, geometry, and problem-solving in both English and Tamil mediums.</p>
+      </div>
+      <div class="subject-card">
+        <img src="ict.png" alt="ICT" class="subject-image" />
+        <h3 class="subject-title">ICT</h3>
+        <p class="subject-description">Information and Communication Technology courses covering computer basics, programming, and digital skills.</p>
+      </div>
+      <div class="subject-card">
+        <img src="business.png" alt="Business and Accounting" class="subject-image" />
+        <h3 class="subject-title">Business and Accounting</h3>
+        <p class="subject-description">Learn business principles, accounting practices, and economics to prepare for the corporate world.</p>
+      </div>
+      <div class="subject-card">
+        <img src="lit.png" alt="English Literature" class="subject-image" />
+        <h3 class="subject-title">English Literature</h3>
+        <p class="subject-description">Study classic and modern literary works to develop critical analysis and appreciation.</p>
+      </div>
+      <div class="subject-card">
+        <img src="civics.png" alt="Civics" class="subject-image" />
+        <h3 class="subject-title">Civics</h3>
+        <p class="subject-description">Understand governance, rights, duties, and the functioning of society and government.</p>
+      </div>
+      <div class="subject-card">
+        <img src="sinhala.png" alt="Sinhala" class="subject-image" />
+        <h3 class="subject-title">Sinhala</h3>
+        <p class="subject-description">Learn Sinhala language and literature for better communication and cultural understanding.</p>
+      </div>
+      <div class="subject-card">
+        <img src="history.png" alt="History" class="subject-image" />
+        <h3 class="subject-title">History</h3>
+        <p class="subject-description">Discover local and world history to build a strong contextual awareness and critical thinking.</p>
       </div>
     </div>
-    <div class="subject">
-      <img src="islam.png" alt="Islam" />
-      <div class="subject-description">
-        <strong>Islam:</strong> Islamic studies (1-5).
-      </div>
-    </div>
-    <div class="subject">
-      <img src="tamil.png" alt="Tamil" />
-      <div class="subject-description">
-        <strong>Tamil:</strong> Language instruction from Grade 1 to 9.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="health.png" alt="Health Education" />
-      <div class="subject-description">
-        <strong>Health Education:</strong> For Grade 7 and above.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="english.png" alt="English" />
-      <div class="subject-description">
-        <strong>English:</strong> Cambridge, Edexcel, and National syllabus.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="geography.png" alt="Geography" />
-      <div class="subject-description">
-        <strong>Geography:</strong> For all eligible grades.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="science.png" alt="Science" />
-      <div class="subject-description">
-        <strong>Science:</strong> From Grade 1 up to O/L.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="maths.png" alt="Maths" />
-      <div class="subject-description">
-        <strong>Maths:</strong> Grades 1 to 11.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="ict.png" alt="ICT" />
-      <div class="subject-description">
-        <strong>I.C.T:</strong> Grades 4 to 10.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="business.png" alt="Business" />
-      <div class="subject-description">
-        <strong>Business & Accounting:</strong> Grades 9 - A/L.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="lit.png" alt="English Literature" />
-      <div class="subject-description">
-        <strong>English Literature:</strong> Grades 7 to 11.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="civics.png" alt="Civics" />
-      <div class="subject-description">
-        <strong>Civics:</strong> Grades 1 to 11.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="sinhala.png" alt="Sinhala" />
-      <div class="subject-description">
-        <strong>Sinhala:</strong> Grades 1 to 9.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="arabic.png" alt="Arabic" />
-      <div class="subject-description">
-        <strong>Arabic:</strong> Grades 3 to 5.
-      </div>
-    </div>
-    <div class="subject">
-      <img src="history.png" alt="History" />
-      <div class="subject-description">
-        <strong>History:</strong> Grades 7 to 11.
-      </div>
-    </div>
-
   </div>
-
-  <footer>
-    <p>&copy; 2025 Success Academy. All rights reserved.</p>
-  </footer>
 </body>
 </html>
+
 
 
     

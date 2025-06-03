@@ -1,91 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Success Academy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Success Academy - About Us</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Roboto:wght@400;700&display=swap');
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #121212;
-      color: #f1c40f;
+      font-family: 'Roboto', sans-serif;
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.6;
     }
+
     header {
-      background: linear-gradient(135deg, #000000, #434343);
-      color: #f1c40f;
-      padding: 60px 20px 30px 20px;
+      background: #ffffff;
+      color: #000000;
+      padding: 50px 20px 70px;
       text-align: center;
-      border-bottom: 3px solid #f1c40f;
+      border-bottom: 2px solid #bfa76a;
+      box-shadow: 0 4px 10px rgba(191, 167, 106, 0.2);
     }
-    header img {
-      width: 100px;
-      height: auto;
-      display: block;
-      margin: 0 auto 20px;
+
+       header img {
+  height: 90px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 3px #bfa76a);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border-radius: 50%;   /* Makes the logo circular */
+  object-fit: cover;    /* Ensures the image covers the circle nicely */
+}
+
+
+    header img:hover {
+      transform: scale(1.05);
     }
+
     header h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 3.5rem;
+      margin: 0 0 10px;
+      letter-spacing: 1px;
+      color: #000000;
     }
+
+    header p {
+      font-size: 1.2rem;
+      color: #333333;
+      font-weight: 500;
+    }
+
     nav {
-      background: #1a1a1a;
+      background: #000000;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 15px;
-      border-bottom: 2px solid #f1c40f;
+      gap: 25px;
+      padding: 18px 10px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1;
     }
+
     nav a {
-      color: #f1c40f;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
       color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: #bfa76a;
+      color: #000000;
+    }
+
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: #1e1e1e;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      max-width: 900px;
+      margin: 40px auto 60px;
+      background: #ffffff;
+      padding: 35px 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(191, 167, 106, 0.3);
+      color: #333333;
     }
+
     h2 {
-      color: #f1c40f;
-      font-family: 'Great Vibes', cursive;
-      font-size: 36px;
-      border-bottom: 2px solid #f1c40f;
-      padding-bottom: 10px;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 2.5rem;
+      color: #000000;
+      border-bottom: 2px solid #bfa76a;
+      padding-bottom: 14px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
       margin-bottom: 30px;
     }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #fff;
-    }
+
     .highlight {
-      color: #f1c40f;
-      font-weight: bold;
+      color: #bfa76a;
+      font-weight: 700;
     }
-    footer {
-      text-align: center;
-      background: #000000;
-      color: #f1c40f;
-      padding: 20px;
-      margin-top: 40px;
-      border-top: 2px solid #f1c40f;
+
+    @media (max-width: 850px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+      }
+
+      .container {
+        padding: 25px 15px;
+        margin: 20px 15px 40px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.jpg" alt="Success Academy Logo">
+    <img src="logo.jpg" alt="Success Academy Logo" />
     <h1>About Success Academy</h1>
+    <p>Passionate Education for Every Learner</p>
   </header>
 
   <nav>
@@ -102,7 +172,7 @@
     <p>At <span class="highlight">Success Academy</span>, we are a passionate and committed educational institution focused on nurturing young minds. Our mission is to empower students with quality tutoring in a personalized and supportive environment.</p>
 
     <h2>Our Values</h2>
-    <p>We believe in excellence, integrity, and commitment. Every lesson is delivered with care and dedication, ensuring that each child receives the attention they deserve. Our tutors are not just educators but mentors who inspire growth both academically and personally.</p>
+    <p>We believe in <span class="highlight">excellence, integrity, and commitment</span>. Every lesson is delivered with care and dedication, ensuring that each child receives the attention they deserve. Our tutors are not just educators but mentors who inspire growth both academically and personally.</p>
 
     <h2>Why Choose Us</h2>
     <p>Whether your child is following a national or international curriculum, we offer support through specialized subjects such as <span class="highlight">Science, Maths, ICT, Business, English, and Qur'an Studies</span>. We aim to make learning enjoyable, effective, and most importantly, empowering.</p>
@@ -110,9 +180,7 @@
     <h2>Our Recognition</h2>
     <p>We are proud to be <span class="highlight">approved by Trinity College London (Sri Lanka)</span> and the <span class="highlight">American Federation Festival (Sri Lanka)</span>. These endorsements validate our commitment to delivering high-quality education and performance excellence.</p>
   </div>
-
-  <footer>
-    <p>&copy; 2025 Success Academy. All rights reserved.</p>
-  </footer>
 </body>
 </html>
+
+
