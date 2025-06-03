@@ -1,104 +1,178 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Success Academy - Tutors</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    /* Existing styles here, unchanged */
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Roboto:wght@400;700&display=swap');
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #121212;
-      color: #f1c40f;
+      font-family: 'Roboto', sans-serif;
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.6;
     }
+
     header {
-      background: linear-gradient(135deg, #000000, #434343);
-      color: #f1c40f;
-      padding: 40px 20px 60px;
+      background: #ffffff;
+      color: #000000;
+      padding: 50px 20px 70px;
       text-align: center;
-      border-bottom: 3px solid #f1c40f;
+      border-bottom: 2px solid #bfa76a;
+      box-shadow: 0 4px 10px rgba(191, 167, 106, 0.2);
     }
+
     header img {
-      height: 80px;
-      margin-bottom: 10px;
+      height: 90px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 0 3px #bfa76a);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      border-radius: 50%;
+      object-fit: cover;
     }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
     header h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3em;
-      margin: 10px 0 5px;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 3.5rem;
+      margin: 0 0 10px;
+      letter-spacing: 1px;
+      color: #000000;
     }
+
+    header p {
+      font-size: 1.2rem;
+      color: #333333;
+      font-weight: 500;
+    }
+
     nav {
-      background: #1a1a1a;
+      background: #000000;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 15px;
-      border-bottom: 2px solid #f1c40f;
+      gap: 25px;
+      padding: 18px 10px;
       flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1;
     }
+
     nav a {
-      color: #f1c40f;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
       color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: #bfa76a;
+      color: #000000;
+    }
+
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: #1e1e1e;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      max-width: 1100px;
+      margin: 40px auto 60px;
+      background: #ffffff;
+      padding: 35px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(191, 167, 106, 0.3);
     }
+
     h2 {
-      color: #f1c40f;
-      border-bottom: 2px solid #f1c40f;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      color: #f1c40f;
-    }
-    th, td {
-      padding: 12px 15px;
-      text-align: left;
-      border-bottom: 1px solid #444;
-      vertical-align: top;
-    }
-    th {
-      background-color: #2c2c2c;
-      font-size: 1.1em;
-    }
-    tr:hover {
-      background-color: #292929;
-    }
-    footer {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 2.5rem;
+      color: #000000;
+      border-bottom: 2px solid #bfa76a;
+      padding-bottom: 14px;
+      margin-bottom: 30px;
       text-align: center;
-      background: #000000;
-      color: #f1c40f;
-      padding: 20px;
-      margin-top: 40px;
-      border-top: 2px solid #f1c40f;
+    }
+
+    .tutors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .tutor-card {
+      background: #f7f7f7;
+      border-radius: 15px;
+      padding: 25px 20px;
+      box-shadow: 0 5px 15px rgba(191, 167, 106, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tutor-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(191, 167, 106, 0.5);
+    }
+
+    .tutor-pic {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px #bfa76a;
+      transition: transform 0.3s ease;
+    }
+
+    .tutor-card:hover .tutor-pic {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #bfa76a;
+    }
+
+    .tutor-name {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.9rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #000000;
+    }
+
+    .tutor-description {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #333333;
+      margin-bottom: 15px;
+      min-height: 48px; /* consistent card height */
+    }
+
+    .tutor-subjects {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #5c5c5c;
+      background: #e9e4d4;
+      padding: 12px 15px;
+      border-radius: 10px;
+      box-shadow: inset 0 0 8px #bfa76a;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.jpg" alt="Success Academy Logo">
+    <img src="logo.jpg" alt="Success Academy Logo" />
     <h1>Meet Our Tutors</h1>
-    <p>Passionate educators guiding your success</p>
+    <p>Dedicated educators empowering every student</p>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="tutors.html">Tutors</a>
+    <a href="tutors.html" aria-current="page">Tutors</a>
     <a href="subjects.html">Subjects</a>
     <a href="about.html">About Us</a>
     <a href="register.html">Register</a>
@@ -106,136 +180,102 @@
   </nav>
 
   <div class="container">
-    <h2>Our Dedicated Tutors</h2>
-    <table>
-     <tbody>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Shahana</strong><br>
-      Dive into the beauty of language and culture with Miss Shahana – empowering students with compassion and clarity.
-    </td>
-    <td>
-      Islam (Grades 1–5), Tamil, Health Education (7+), Cambridge/Edexcel/National English, Geography
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Shaziya</strong><br>
-      Discover the logic behind numbers and the dynamics of enterprise with Miss Shaziya – nurturing young minds in an inspiring way.
-    </td>
-    <td>
-      Maths (7–8), ICT (9–10), Business/Accounting (9–10)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Saarah Fareez</strong><br>
-      Embark on an engaging journey through science and literature with Miss Saarah – making complex concepts simple and enjoyable.
-    </td>
-    <td>
-      Science (9–11), ICT (4–8), English Literature (7–11)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Azra Iqbal</strong><br>
-      Master the art of communication and civic awareness with Miss Azra – instilling confidence in every lesson.
-    </td>
-    <td>
-      English Literature, Civics, Sinhala (1–9)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Mariyam Waseem</strong><br>
-      Connect with faith and values through heartfelt Qur'an and Islam teachings – nurturing wisdom and spirituality.
-    </td>
-    <td>
-      Qur'an, Islam (6–11)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Zuleka Sameen</strong><br>
-      Begin your Arabic language adventure with Miss Zuleka – making learning joyful and interactive.
-    </td>
-    <td>
-      Arabic (Grades 3–5)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Fathima Umaimah Fareez</strong><br>
-      Build confidence in logic and social understanding with Miss Umaimah – simplifying Maths and Civics.
-    </td>
-    <td>
-      Maths, Civics (1–11)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Shara Usman</strong><br>
-      Relive history with Miss Shara – making the past come alive in every class.
-    </td>
-    <td>
-      History (7–11)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Mariyam Fahim</strong><br>
-      Step into the business world with Miss Mariyam – guiding learners through Business Studies and Accounting with real-world relevance.
-    </td>
-    <td>
-      Business Studies, Accounting (Up to A/L)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Nazha</strong><br>
-      Enrich your understanding of Islamic values and political science with Miss Nazha – fostering analytical and spiritual growth.
-    </td>
-    <td>
-      Islamic Values, Political Science (Various)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Kadheeja</strong><br>
-      Embrace the elegance of Tamil with Miss Kadheeja – where every lesson brings language to life.
-    </td>
-    <td>
-      Tamil (Various)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="girlpic.png" alt="Tutor" style="border-radius:50%; vertical-align:middle; margin-right:12px; width:60px; height:60px;">
-      <strong>Miss Nuha Fahim</strong><br>
-      Experience the depth and beauty of Arabic language with Miss Nuha – teaching with passion and precision.
-    </td>
-    <td>
-      Arabic (Various)
-    </td>
-  </tr>
-</tbody>
+    <h2>Our Tutors</h2>
+    <div class="tutors-grid">
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Miss Shahana" class="tutor-pic" />
+        <h3 class="tutor-name">Miss Shahana</h3>
+        <p class="tutor-description">Empowering students with compassion and clarity.</p>
+        <p class="tutor-subjects">Islam (1–5), Tamil, Health Education (7+), English, Geography</p>
+      </div>
 
-    </table>
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Miss Shaziya" class="tutor-pic" />
+        <h3 class="tutor-name">Miss Shaziya</h3>
+        <p class="tutor-description">Inspiring young minds in Maths and Business.</p>
+        <p class="tutor-subjects">Maths (7–8), ICT (9–10), Business/Accounting (9–10)</p>
+      </div>
+
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Miss Saarah" class="tutor-pic" />
+        <h3 class="tutor-name">Miss Saarah Fareez</h3>
+        <p class="tutor-description">Makes science and literature simple and enjoyable.</p>
+        <p class="tutor-subjects">Science (9–11), ICT (4–8), English Literature (7–11)</p>
+      </div>
+
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Miss Azra" class="tutor-pic" />
+        <h3 class="tutor-name">Miss Azra Iqbal</h3>
+        <p class="tutor-description">Boosts communication and civic awareness.</p>
+        <p class="tutor-subjects">English Literature, Civics, Sinhala (1–9)</p>
+      </div>
+
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Miss Mariyam" class="tutor-pic" />
+        <h3 class="tutor-name">Miss Mariyam Waseem</h3>
+        <p class="tutor-description">Teaches Qur'an and Islam with heart and clarity.</p>
+        <p class="tutor-subjects">Qur'an, Islam (6–11)</p>
+      </div>
+
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Miss Zuleka" class="tutor-pic" />
+        <h3 class="tutor-name">Miss Zuleka Sameen</h3>
+        <p class="tutor-description">Makes Arabic learning joyful and fun.</p>
+        <p class="tutor-subjects">Arabic (3–5)</p>
+      </div>
+
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Miss Umaimah" class="tutor-pic" />
+        <h3 class="tutor-name">Miss Fathima Umaimah Fareez</h3>
+        <p class="tutor-description">Simplifies Islamic knowledge for all grades.</p>
+        <p class="tutor-subjects">Islam (3–6), Tamil (3–6)</p>
+      </div>
+
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Ms Shazna" class="tutor-pic" />
+        <h3 class="tutor-name">Ms Shazna</h3>
+        <p class="tutor-description">Expert Tamil medium tutor for grades 6 to 11.</p>
+        <p class="tutor-subjects">Maths and Science Tamil medium (6–11)</p>
+      </div>
+
+      <!-- New tutors added below -->
+
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Miss Nazha" class="tutor-pic" />
+        <h3 class="tutor-name">Miss Nazha</h3>
+        <p class="tutor-description">Specializes in Islam and Political Science for ALS.</p>
+        <p class="tutor-subjects">Islam and Political Science (ALS)</p>
+      </div>
+
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Miss Nuha Fahim" class="tutor-pic" />
+        <h3 class="tutor-name">Miss Nuha Fahim</h3>
+        <p class="tutor-description">Expert in Arabic language for grades 5 to 11.</p>
+        <p class="tutor-subjects">Arabic (Grades 5–11)</p>
+      </div>
+
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Miss Kadeeja" class="tutor-pic" />
+        <h3 class="tutor-name">Miss Kadeeja</h3>
+        <p class="tutor-description">Experienced tamil language tutor for all grades from 1 to ALS.</p>
+        <p class="tutor-subjects">Grades 1 to ALS</p>
+      </div>
+
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Mariyam Fahim" class="tutor-pic" />
+        <h3 class="tutor-name">Mariyam Fahim</h3>
+        <p class="tutor-description">Teaches Business Studies and Accounting for O/L and A/L.</p>
+        <p class="tutor-subjects">Business Studies (O/L & ALS), Accounting (O/L & AL)</p>
+      </div>
+
+      <div class="tutor-card">
+        <img src="girlpic.png" alt="Shara Usman" class="tutor-pic" />
+        <h3 class="tutor-name">Shara Usman</h3>
+        <p class="tutor-description">Passionate History tutor for grades 1 to 11.</p>
+        <p class="tutor-subjects">History (Grades 1–11)</p>
+      </div>
+    </div>
   </div>
-
-  <footer>
-    <p>&copy; 2025 Success Academy. All rights reserved.</p>
-  </footer>
 </body>
 </html>
+
